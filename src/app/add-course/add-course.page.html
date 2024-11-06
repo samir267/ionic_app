@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">AddCourse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">AddCourse</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+    <ion-item>
+      <ion-input label="Title" type="text" ngModel name="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Author" type="text" ngModel name="author"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Image" type="text" ngModel name="image"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Keywords" type="text" ngModel name="keywords"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" class="ion-margin-vertical ion-margin-horizontal" type="submit">
+      Add
+    </ion-button>
+  </form>
+</ion-content>
